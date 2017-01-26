@@ -1,0 +1,15 @@
+﻿@model Levelnis.Learning.ReadOnlyViews.Models.ReadOnlyViewModel
+
+<div class="row">
+    <div class="col-xs-8">
+        <p>This is a read-only view!</p>
+        <div class="form-group">
+            @Html.LabelFor(m => m.PieceOfData, "Piece of Data")
+            @Html.TextBoxFor(m => m.PieceOfData, new { @class = "form-control", disabled = "disabled" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.AnotherPieceOfData, "Another Piece of Data")
+            @Html.TextBoxFor(m => m.AnotherPieceOfData, new { @class = "form-control", disabled = "disabled" })
+        </div>
+    </div>
+</div>

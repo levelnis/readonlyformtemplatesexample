@@ -1,0 +1,21 @@
+﻿@model Levelnis.Learning.ReadOnlyViews.Models.ReadOnlyViewModel
+
+<div class="row">
+    <div class="col-xs-8">
+        <p>This is an editable view!</p>
+        @using (Html.BeginForm())
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.PieceOfData, "Piece of Data")
+                @Html.TextBoxFor(m => m.PieceOfData, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.AnotherPieceOfData, "Another Piece of Data")
+                @Html.TextBoxFor(m => m.AnotherPieceOfData, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <p class="pull-right"><button type="submit" class="btn btn-primary">Save</button></p>
+            </div>
+        }
+    </div>
+</div>

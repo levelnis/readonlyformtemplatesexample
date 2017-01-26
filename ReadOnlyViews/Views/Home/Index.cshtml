@@ -1,0 +1,12 @@
+﻿@model Levelnis.Learning.ReadOnlyViews.Models.ReadOnlyViewModel
+@{
+    ViewBag.Title = "ReadOnly Views";
+}
+
+<div class="jumbotron">
+    <h1>Read-only Views</h1>
+    <p class="lead">This demo highlights the ease with which you can create a read-only view.</p>
+    <p>The form below starts out editable and switches to readonly when you submit it. Note that it doesn't follow the recommended MVC pattern of PRG (Post-Redirect-Get), but just serves to illustrate switching between editable and read-only views.</p>
+</div>
+
+@(Model.IsReadonly ? Html.DisplayForModel() : Html.EditorForModel())
